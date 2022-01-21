@@ -1,0 +1,41 @@
+<!-- Blog HTML -->
+<section id="blog">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+        {% assign posts_sorted = site.posts | sort: "author" %} {% for post in
+        posts_sorted reversed %}
+        <div style="min-height: 300px">
+          <!-- Blog Post -->
+          <h2>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+          </h2>
+
+          <p class="lead">by {{ post.author }}</p>
+          <p>
+            <span class="glyphicon glyphicon-time"></span> Posted on {{
+            post.date | date: "%B %d, %Y" }}
+          </p>
+          <!-- <hr /> -->
+
+          {% if post.image %}
+          <img
+            src="{{ post.image }}"
+            alt="{{ post.title }}"
+            class="img-responsive col-lg-6"
+          />
+          <!-- <hr /> -->
+          {% endif %} {% if post.lead %}
+          <p>{{ post.lead }}</p>
+          {% endif %} {{ post.excerpt }}
+
+          <a class="btn btn-primary" href="{{ post.url }}"
+            >Read More <span class="glyphicon glyphicon-chevron-right"></span
+          ></a>
+        </div>
+        <hr />
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

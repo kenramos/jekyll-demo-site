@@ -23,7 +23,7 @@ email: email@email.com
 description: >- # this means to ignore newlines until "baseurl:"
   "Great web agency offers high impact yet affordable web development services. From web design to targeted SEO to custom web applications."
 baseurl: '' # the subpath of your site, e.g. /blog
-url: 'http://127.0.0.1:4000/' # the base hostname & protocol for your site, e.g. http://example.com
+url: 'https://kenramos.github.io/jekyll-demo-site/' # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username: jekyll
 
